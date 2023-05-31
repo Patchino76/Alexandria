@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+<h1>Book lovers</h1>
+
+{% block content %}
+
+<ul>    
+    {% for profile in profiles %} 
+    <li>
+        <a href="/people/profile/{{profile.id}}/">{{profile.username}}</a>
+
+    </li>
+    {%empty%}
+        <i>no books in the list</i>
+
+    {% endfor %}
+
+</ul>
+{% endblock content %}

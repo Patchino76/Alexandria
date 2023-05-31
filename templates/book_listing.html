@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{%block content %} 
+
+<h1>Books</h1>
+
+    <p>
+        {% for book in books %} 
+        <b>{{book.title}}</b>;
+            {{book.author.last_name}}, {{book.author.first_name}}
+        <br/>
+        {% empty %} 
+        <i>no records</i>
+        {% endfor %} 
+    </p>
+{% endblock content  %}
+ 
